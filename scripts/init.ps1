@@ -1,7 +1,7 @@
 git init
 hub create
 
-$parent = (get-item . ).parent.parent.FullName
+$parent = (get-item . ).parent.FullName
 $parts = $parent -split '-'
 
 $TextInfo = (Get-Culture).TextInfo
