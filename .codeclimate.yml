@@ -1,0 +1,41 @@
+engines:
+  duplication:
+    enabled: false
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+    checks: 
+      array-bracket-newline:
+        enabled: false
+      for-direction:
+        enabled: false
+      func-style:
+        enabled: false
+      global-require:
+        enabled: false
+      no-buffer-constructor:
+        enabled: false
+      no-undef:
+        enabled: false
+      object-curly-spacing:
+        enabled: false
+      padding-line-between-statements:
+        enabled: false
+      semi-style:
+        enabled: false
+      switch-colon-spacing:
+        enabled: false
+      spaced-comment:
+        enabled: false
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+exclude_paths:
+- config/
+- dist/
+- app/unused/**/*
+- public/**/*
