@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 
-import { TypeUtils } from 'type-utils'
+import { TypeUtils } from '@beautiful-code/type-utils'
 import { StringStream } from '../src/StringStream'
 
 describe('StringStream', () => {
