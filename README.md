@@ -4,27 +4,27 @@ This is a simple, string manipulation and comparison library. This is intended t
 
 ##Installation
 
-###Using NPM
+###Using NPM or Yarn
 ```
-npm install 'string-utils'
+npm install '@beautiful-code/string-utils'
+yard add '@beautiful-code/string-utils'
 ```
 
 ##Usage
 
-
 ###Basic Usage
 
 ```javascript
-const StringUtils = require('string-utils').StringUtils
+const StringUtils = require('@beautiful-code/string-utils').StringUtils
 
 let example = 'this is a string'
 StringUtils.contains('string') // true
-example = StringUtils.toCamleCase(example) // thisIsAString
+example = StringUtils.toCamelCase(example) // thisIsAString
 ```
 
 ###Stream API
 ```javascript
-const stream = require('string-utils').stream
+const stream = require('@beautiful-code/string-utils').stream
 
 let example = 'this is a string'
 example = stream(example).toCamelCase().capitalize().get() // ThisIsAString
