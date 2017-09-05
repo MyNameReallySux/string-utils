@@ -1,5 +1,5 @@
 {
-  "name": "cc-string-utils",
+  "name": "@mynamereallysux/string-utils",
   "version": "0.1.0",
   "description": "Library for manipulating strings.",
   "main": "./dist/index.js",
