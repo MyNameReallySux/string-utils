@@ -1,6 +1,6 @@
 {
   "name": "@beautiful-code/string-utils",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Library for manipulating strings.",
   "main": "./dist/index.js",
   "scripts": {
