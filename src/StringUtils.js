@@ -3,7 +3,6 @@
 ########################## */
 
 import { TypeUtils } from '@beautiful-code/type-utils'
-import { StringStream } from './StringStream'
 
 /* ##########################
   Class Definition
@@ -127,6 +126,6 @@ let contains = 		StringUtils.contains,
 
 export default StringUtils
 export {
-	StringUtils, StringStream,
+	StringUtils,
 	contains, capitalize, toCamelCase, toSnakeCase, toReadable, toWordArray
 }
