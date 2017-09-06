@@ -62,5 +62,5 @@ let stringStream = StringStream.stream
 export default StringStream
 export {
 	StringStream,
-	stringStream
+	stream
 }
