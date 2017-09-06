@@ -3,7 +3,7 @@ node_js:
   - "stable"
 before_script:
   - npm install
-  - npm install -g webpack
+  - npm install -g babel
 script:
   - webpack
   - mocha
