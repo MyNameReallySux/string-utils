@@ -5,5 +5,5 @@ before_script:
   - npm install
   - npm install -g babel
 script:
-  - webpack
+  - npm run build
   - mocha
