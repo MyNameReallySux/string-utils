@@ -3,15 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.toWordArray = exports.toReadable = exports.toSnakeCase = exports.toCamelCase = exports.capitalize = exports.contains = exports.StringStream = exports.StringUtils = undefined;
+exports.toWordArray = exports.toReadable = exports.toSnakeCase = exports.toCamelCase = exports.capitalize = exports.contains = exports.StringUtils = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* ##########################
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Imports
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ########################## */
 
 var _typeUtils = require('@beautiful-code/type-utils');
-
-var _StringStream = require('./StringStream');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -165,7 +163,6 @@ var contains = StringUtils.contains,
 
 exports.default = StringUtils;
 exports.StringUtils = StringUtils;
-exports.StringStream = _StringStream.StringStream;
 exports.contains = contains;
 exports.capitalize = capitalize;
 exports.toCamelCase = toCamelCase;
