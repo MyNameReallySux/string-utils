@@ -97,7 +97,7 @@ var StringStream = function () {
 	return StringStream;
 }();
 
-var stringStream = StringStream.stream;
+var stream = StringStream.stream;
 
 exports.default = StringStream;
 exports.StringStream = StringStream;
