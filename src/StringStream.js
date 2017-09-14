@@ -57,7 +57,7 @@ class StringStream {
 	}
 }
 
-let stringStream = StringStream.stream
+let stream = StringStream.stream
 
 export default StringStream
 export {
