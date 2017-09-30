@@ -1,18 +1,18 @@
-#String Utils
+# String Utils
 
 This is a simple, string manipulation and comparison library. This is intended to be used imported via Node.js (or a bundler like Webpack for client side).
 
-##Installation
+## Installation
 
-###Using NPM or Yarn
+### Using NPM or Yarn
 ```
 npm install '@beautiful-code/string-utils'
 yard add '@beautiful-code/string-utils'
 ```
 
-##Usage
+## Usage
 
-###Basic Usage
+### Basic Usage
 
 ```javascript
 const StringUtils = require('@beautiful-code/string-utils').StringUtils
