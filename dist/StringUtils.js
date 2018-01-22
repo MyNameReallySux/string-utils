@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.toWordArray = exports.toReadable = exports.toSnakeCase = exports.toCamelCase = exports.capitalize = exports.contains = exports.StringUtils = undefined;
+exports.toWordArray = exports.toReadable = exports.toSnakeCase = exports.toKebabCase = exports.toCamelCase = exports.capitalize = exports.contains = exports.StringUtils = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* ##########################
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Imports
@@ -27,18 +27,6 @@ var StringUtils = function () {
 		value: function modifyPrototype() {
 			StringUtils.STRING_PROTOTYPE = StringUtils.STRING_PROTOTYPE || String.prototype;
 
-			/*
-   let staticMethods = Object.getOwnPropertyNames(StringUtils)
-   for(let { key, value } of staticMethods){
-   	console.log(`${key}: ${value}`)
-   }
-   
-   let classMethods = Object.getOwnPropertyNames(Object.getPrototypeOf(StringUtils))
-   for(let { key, value } of classMethods){
-   	console.log(`${key}: ${value}`)
-   }
-   */
-
 			String.prototype.contains = function (test) {
 				return StringUtils.contains(this, test);
 			};
@@ -49,6 +37,10 @@ var StringUtils = function () {
 
 			String.prototype.toCamelCase = function () {
 				return StringUtils.toCamelCase(this);
+			};
+
+			String.prototype.toKebabCase = function () {
+				return StringUtils.toKebabCase(this);
 			};
 
 			String.prototype.toSnakeCase = function () {
@@ -157,6 +149,7 @@ var StringUtils = function () {
 var contains = StringUtils.contains,
     capitalize = StringUtils.capitalize,
     toCamelCase = StringUtils.toCamelCase,
+    toKebabCase = StringUtils.toKebabCase,
     toSnakeCase = StringUtils.toSnakeCase,
     toReadable = StringUtils.toReadable,
     toWordArray = StringUtils.toWordArray;
@@ -166,6 +159,7 @@ exports.StringUtils = StringUtils;
 exports.contains = contains;
 exports.capitalize = capitalize;
 exports.toCamelCase = toCamelCase;
+exports.toKebabCase = toKebabCase;
 exports.toSnakeCase = toSnakeCase;
 exports.toReadable = toReadable;
 exports.toWordArray = toWordArray;

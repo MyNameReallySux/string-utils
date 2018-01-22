@@ -112,7 +112,7 @@ class StringUtils {
 let contains = 		StringUtils.contains,
 	capitalize = 	StringUtils.capitalize,
 	toCamelCase = 	StringUtils.toCamelCase,
-	toKebabCase = 	StringUtils.toKebabCase
+	toKebabCase = 	StringUtils.toKebabCase,
 	toSnakeCase = 	StringUtils.toSnakeCase,
 	toReadable = 	StringUtils.toReadable,
 	toWordArray = 	StringUtils.toWordArray
