@@ -12,18 +12,6 @@ class StringUtils {
 	static modifyPrototype() {
 		StringUtils.STRING_PROTOTYPE = StringUtils.STRING_PROTOTYPE || String.prototype
 		
-		/*
-		let staticMethods = Object.getOwnPropertyNames(StringUtils)
-		for(let { key, value } of staticMethods){
-			console.log(`${key}: ${value}`)
-		}
-		
-		let classMethods = Object.getOwnPropertyNames(Object.getPrototypeOf(StringUtils))
-		for(let { key, value } of classMethods){
-			console.log(`${key}: ${value}`)
-		}
-		*/
-		
 		String.prototype.contains = function(test){
 			return StringUtils.contains(this, test)
 		}
@@ -34,6 +22,10 @@ class StringUtils {
 
 		String.prototype.toCamelCase = function(){
 			return StringUtils.toCamelCase(this)
+		}
+
+		String.prototype.toKebabCase = function(){
+			return StringUtils.toKebabCase(this)
 		}
 
 		String.prototype.toSnakeCase = function(){
@@ -120,6 +112,7 @@ class StringUtils {
 let contains = 		StringUtils.contains,
 	capitalize = 	StringUtils.capitalize,
 	toCamelCase = 	StringUtils.toCamelCase,
+	toKebabCase = 	StringUtils.toKebabCase
 	toSnakeCase = 	StringUtils.toSnakeCase,
 	toReadable = 	StringUtils.toReadable,
 	toWordArray = 	StringUtils.toWordArray
@@ -127,5 +120,5 @@ let contains = 		StringUtils.contains,
 export default StringUtils
 export {
 	StringUtils,
-	contains, capitalize, toCamelCase, toSnakeCase, toReadable, toWordArray
+	contains, capitalize, toCamelCase, toKebabCase, toSnakeCase, toReadable, toWordArray
 }
