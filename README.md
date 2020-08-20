@@ -2,6 +2,9 @@
 
 This is a simple, string manipulation and comparison library. This is intended to be used imported via Node.js (or a bundler like Webpack for client side).
 
+### View On
+ - [Code Climate](https://codeclimate.com/github/MyNameReallySux/string-utils)
+
 ## Installation
 
 ### Using NPM or Yarn
