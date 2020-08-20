@@ -3,7 +3,15 @@ env:
   node: true,
   shared-node-browser: true,
   es6: true
+<<<<<<< Updated upstream
 extends: 'eslint:recommended'
+=======
+extends: 
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/eslint-recommended'
+  - 'plugin:@typescript-eslint/recommended'
+parser: '@typescript-eslint/parser'
+>>>>>>> Stashed changes
 parserOptions:
   sourceType: module
 rules:
