@@ -1,0 +1,1 @@
+declare module '@beautiful-code/type-utils'
