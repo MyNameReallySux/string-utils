@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "commonjs",
+		"lib": [
+			"ES2020"
+		],
+		"strict": true
+	},
+	"include": [
+		"src/**/*",
+		"test/**/*"
+	]
+}
