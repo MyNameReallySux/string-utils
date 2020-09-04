@@ -1,14 +1,23 @@
 engines:
   duplication:
-    enabled: false
+    enabled: true
     config:
       languages:
       - javascript
+      - typescript
+  fixme:
+    enabled: true
+plugins:
   eslint:
     enabled: true
+    channel: 'eslint-6'
+    config:
+      config: .eslintrc.yml
     checks: 
       array-bracket-newline:
         enabled: false
+      complexity:
+        enabled: true
       for-direction:
         enabled: false
       func-style:
@@ -29,11 +38,10 @@ engines:
         enabled: false
       spaced-comment:
         enabled: false
-  fixme:
-    enabled: true
 ratings:
   paths:
   - "**.js"
+  - "**.ts"
 exclude_paths:
 - config/
 - dist/
