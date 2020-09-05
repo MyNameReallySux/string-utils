@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.stream = exports.StringStream = exports["default"] = void 0;
+exports.stream = exports.StringStream = void 0;
 
 var _StringUtils = require("./StringUtils");
 
@@ -13,12 +13,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /* ##########################
   Class Definition
 ########################## */
 var StringStream = /*#__PURE__*/function () {
   _createClass(StringStream, null, [{
     key: "stream",
+
+    /**
+     * An alias that creates a new {@link StringStream} instance.
+     * @param string string to start streaming
+     */
     value: function stream(string) {
       return new StringStream(string);
     }
@@ -27,11 +34,13 @@ var StringStream = /*#__PURE__*/function () {
   function StringStream(string) {
     _classCallCheck(this, StringStream);
 
+    _defineProperty(this, "s", void 0);
+
     this.s = string;
   }
   /**
-   * Returns the current instance value as a string
-   * @returns {string} Current instance value
+   * Returns the current instance value as a string.
+   * @returns Current instance value
    */
 
 
@@ -41,52 +50,54 @@ var StringStream = /*#__PURE__*/function () {
       return this.s + '';
     }
     /**
-     * Returns if instance value contains a specific phrase
-     * @param   {string}  phrase Needle
-     * @returns {boolean} If 'this.value' contains 'phrase'
+     * Capitalizes the first letter of the instance value and returns the instance.
      */
 
-  }, {
-    key: "contains",
-    value: function contains(phrase) {
-      return _StringUtils.StringUtils.contains(this.s, phrase);
-    }
   }, {
     key: "capitalize",
     value: function capitalize() {
       this.s = _StringUtils.StringUtils.capitalize(this.s);
       return this;
     }
+    /**
+     * Converts the instance value to camel case and returns the instance.
+     */
+
   }, {
     key: "toCamelCase",
     value: function toCamelCase() {
       this.s = _StringUtils.StringUtils.toCamelCase(this.s);
       return this;
     }
+    /**
+     * Converts the instance value to kebab case and returns the instance.
+     */
+
   }, {
     key: "toKebabCase",
     value: function toKebabCase() {
       this.s = _StringUtils.StringUtils.toKebabCase(this.s);
       return this;
     }
+    /**
+     * Converts the instance value to snake case and returns the instance.
+     */
+
   }, {
     key: "toSnakeCase",
     value: function toSnakeCase() {
       this.s = _StringUtils.StringUtils.toSnakeCase(this.s);
       return this;
     }
+    /**
+     * Converts the instance value to a readable string and returns the instance.
+     */
+
   }, {
     key: "toReadable",
     value: function toReadable() {
       var separator = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ' ';
       this.s = _StringUtils.StringUtils.toReadable(this.s, separator);
-      return this;
-    }
-  }, {
-    key: "toWordArray",
-    value: function toWordArray() {
-      var pattern = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : /(?=[A-Z ])/g;
-      this.s = _StringUtils.StringUtils.toWordArray(this.s, pattern);
       return this;
     }
   }]);
@@ -97,5 +108,3 @@ var StringStream = /*#__PURE__*/function () {
 exports.StringStream = StringStream;
 var stream = StringStream.stream;
 exports.stream = stream;
-var _default = StringStream;
-exports["default"] = _default;

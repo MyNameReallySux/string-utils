@@ -5,10 +5,12 @@
 		"lib": [
 			"ES2020"
 		],
-		"strict": true
+		"strict": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "./dist"
 	},
 	"include": [
-		"src/**/*",
-		"test/**/*"
+		"src/**/*"
 	]
 }

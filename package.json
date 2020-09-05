@@ -4,7 +4,9 @@
   "description": "Library for manipulating strings.",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "npx babel ./src --out-dir ./dist",
+	"build": "npm run build:code && npm run build:types",
+	"build:code": "npx babel ./src --out-dir ./dist --extensions \".js\",\".ts\"",
+	"build:types": "npx tsc -p ./tsconfig-build.json",
     "test": "npx mocha ./test/**/*.{js,ts} --require ./registerBabel.js ./test/**/*.ts",
     "test:watch": "npm run test -- --watch --watch-extensions js,ts",
     "prepublishOnly": "npm run build && npm run test"
