@@ -78,7 +78,7 @@ var StringUtils = /*#__PURE__*/function () {
       return StringUtils.toWordArray(string).map(function (word) {
         return word.trim();
       }).map(function (word) {
-        return capitalize ? StringUtils.capitalize(word) : word.toLowerCase();
+        if (capitalize) return StringUtils.capitalize(word);else return word.toLowerCase();
       }).join('-');
     }
     /**
@@ -94,7 +94,7 @@ var StringUtils = /*#__PURE__*/function () {
       return StringUtils.toWordArray(string).map(function (word) {
         return word.trim();
       }).map(function (word) {
-        return capitalize ? StringUtils.capitalize(word) : word.toLowerCase();
+        if (capitalize) return StringUtils.capitalize(word);else return word.toLowerCase();
       }).join('_');
     }
     /**
@@ -113,11 +113,10 @@ var StringUtils = /*#__PURE__*/function () {
       var capitalize = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
       if (!_typeUtils.TypeUtils.isString(string)) throw Error('StringUtils.toReadable\'s \'string\' property must be a string');
       if (!_typeUtils.TypeUtils.isString(separator)) throw Error('StringUtils.toReadable\'s \'separator\' property must be a string');
-      console.log(StringUtils.toWordArray(string));
       return StringUtils.toWordArray(string).map(function (word) {
         return word.trim();
       }).map(function (word) {
-        return capitalize ? StringUtils.capitalize(word) : word.toLowerCase();
+        if (capitalize) return StringUtils.capitalize(word);else return word.toLowerCase();
       }).join(separator);
     }
     /**
@@ -132,13 +131,6 @@ var StringUtils = /*#__PURE__*/function () {
     key: "toWordArray",
     value: function toWordArray(string) {
       var pattern = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : /[\s]/g;
-      var a = string.replace(/[,:;_-]/g, ' ');
-      var b = a.replace(/([a-z])([A-Z])/g, '$1 $2');
-      var c = b.replace(/([A-Z])([A-Z])/, '$1 $2');
-      var d = c.split(pattern);
-      var e = d.map(function (word) {
-        return word.trim();
-      });
       return string.trim().replace(/[,:;_-]/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z])([A-Z])/, '$1 $2').split(pattern).map(function (word) {
         return word.trim();
       }).filter(function (word) {

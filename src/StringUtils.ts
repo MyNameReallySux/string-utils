@@ -57,9 +57,10 @@ export class StringUtils {
 	static toKebabCase(string: string, capitalize = false){
 		return StringUtils.toWordArray(string)
 			.map((word) => word.trim())
-			.map((word) => capitalize
-				 ? StringUtils.capitalize(word)
-				 : word.toLowerCase())
+			.map((word) => {
+				if(capitalize) return StringUtils.capitalize(word)
+				else return word.toLowerCase()
+			})
 			.join('-')
 	}
 
@@ -71,9 +72,10 @@ export class StringUtils {
 	static toSnakeCase(string: string, capitalize = false){
 		return StringUtils.toWordArray(string)
 			.map((word) => word.trim())
-			.map((word) => capitalize
-				 ? StringUtils.capitalize(word)
-				 : word.toLowerCase())
+			.map((word) => {
+				if(capitalize) return StringUtils.capitalize(word)
+				else return word.toLowerCase()
+			})
 			.join('_')
 	}
 
@@ -91,12 +93,12 @@ export class StringUtils {
 		if(!TypeUtils.isString(separator))
 			throw Error('StringUtils.toReadable\'s \'separator\' property must be a string')
 		
-		console.log(StringUtils.toWordArray(string))
 		return StringUtils.toWordArray(string)
 			.map((word) => word.trim())
-			.map((word) => capitalize
-				 ? StringUtils.capitalize(word)
-				 : word.toLowerCase())
+			.map((word) => {
+				if(capitalize) return StringUtils.capitalize(word)
+				else return word.toLowerCase()
+			})
 			.join(separator)
 	}
 
@@ -108,11 +110,6 @@ export class StringUtils {
 	 * @param pattern regex pattern to split words by
 	 */
 	static toWordArray(string: string, pattern = /[\s]/g): string[] {
-		const a = string.replace(/[,:;_-]/g, ' ')
-		const b = a.replace(/([a-z])([A-Z])/g, '$1 $2')
-		const c = b.replace(/([A-Z])([A-Z])/, '$1 $2')
-		const d = c.split(pattern)
-		const e = d.map(word => word.trim())
 		return string
 			.trim()
 			.replace(/[,:;_-]/g, ' ')

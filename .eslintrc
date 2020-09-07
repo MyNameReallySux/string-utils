@@ -69,7 +69,7 @@
       "consistent-this": "error",
       "curly": "off",
       "default-case": "error",
-      "dot-location": "error",
+      "dot-location": "off",
       "dot-notation": "off",
       "eol-last": "off",
       "eqeqeq": "off",
@@ -281,7 +281,7 @@
          "error",
          "never"
       ],
-      "valid-jsdoc": "error",
+      "valid-jsdoc": "off",
       "vars-on-top": "error",
       "wrap-iife": "error",
       "wrap-regex": "error",
